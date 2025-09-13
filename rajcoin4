@@ -1,0 +1,9 @@
+body{font-family:sans-serif;margin:0;padding:0;background:#0d1b2a;color:#fff}
+header{padding:1rem;background:#071428;display:flex;justify-content:space-between;align-items:center}
+.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;padding:1rem}
+.game-card{display:block;padding:1rem;background:#1b1f3a;text-align:center;border-radius:10px;text-decoration:none;color:#fff}
+.game-page{padding:1rem}
+.coin{font-size:48px;cursor:pointer;margin:1rem 0}
+.choices label{display:block;margin-top:0.5rem}
+button{padding:0.5rem 1rem;margin-top:0.5rem;border:none;border-radius:8px;background:#6c5ce7;color:#fff;cursor:pointer}
+#result{margin-top:1rem;font-weight:bold}
