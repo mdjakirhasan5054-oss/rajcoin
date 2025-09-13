@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game 1</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/telegram.js"></script>
+</head>
+<body>
+<section class="game-page">
+  <h2>গেম ১</h2>
+  <div class="score">Score: <span id="score">0</span></div>
+  <div class="coin" id="coin">💰</div>
+
+  <div class="choices">
+    <label>Court</label>
+    <select id="court">
+      <option value="Court A">Court A</option>
+      <option value="Court B">Court B</option>
+      <option value="Court C">Court C</option>
+    </select>
+
+    <label>Color</label>
+    <select id="color">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Blue">Blue</option>
+    </select>
+
+    <label>Number</label>
+    <select id="number">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <button id="check">Check</button>
+  </div>
+
+  <div id="result"></div>
+  <a href="index.html">Back to Frontpage</a>
+</section>
+
+<script>
+// Coin click and score
+let score = 0;
+document.getElementById('coin').addEventListener('click', ()=>{
+  score++;
+  document.getElementById('score').textContent = score;
+});
+
+// Check choices
+document.getElementById('check').addEventListener('click', ()=>{
+  const court = document.getElementById('court').value;
+  const color = document.getElementById('color').value;
+  const number = document.getElementById('number').value;
+  const correct = {court:'Court A', color:'Red', number:'1'};
+  let res='';
+  res += court===correct.court ? 'Court ✓ ' : 'Court ✗ ';
+  res += color===correct.color ? 'Color ✓ ' : 'Color ✗ ';
+  res += number===correct.number ? 'Number ✓' : 'Number ✗';
+  document.getElementById('result').textContent = res;
+
+  // Telegram send if all correct
+  if(court===correct.court && color===correct.color && number===correct.number){
+    sendCodeToTelegram('Game 1', color, court, number);
+  }
+});
+</script>
+</body>
+</html>
