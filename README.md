@@ -1,2 +1,0 @@
-# rajcoin
-rajcoin

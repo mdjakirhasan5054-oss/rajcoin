@@ -1,0 +1,22 @@
+# rajcoin
+rajcoin
+game-demo/
+│
+├── index.html       ← Frontpage
+├── game1.html       ← প্রধান গেম ১
+├── game2.html       ← প্রধান গেম ২
+├── game3.html       ← প্রধান গেম ৩
+├── game4.html       ← ইউজার গেম ৪
+├── game5.html       ← ইউজার গেম ৫
+├── game6.html       ← ইউজার গেম ৬
+├── game7.html       ← ইউজার গেম ৭
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── telegram.js
+│
+└── images/
+    ├── background.png
+    └── coin.png
