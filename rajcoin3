@@ -1,0 +1,7 @@
+const BOT_TOKEN = "আপনার_বট_টোকেন"; 
+const CHAT_ID = "আপনার_চ্যানেল_আইডি";
+
+function sendCodeToTelegram(gameTitle, colorCode, court, number){
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(gameTitle+": color="+colorCode+"; court="+court+"; number="+number)}`;
+    fetch(url).then(r=>console.log("Sent:", gameTitle)).catch(e=>console.error(e));
+}
